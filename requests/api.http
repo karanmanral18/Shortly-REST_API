@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/url/shorten
+POST https://shortly86505.herokuapp.com/api/url/shorten
 Content-Type: application/json
 
 {

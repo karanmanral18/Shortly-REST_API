@@ -9,6 +9,7 @@ const connectDB = async () => {
     await mongoose.connect(db, { useNewUrlParser: true });
     console.log("MOngoDB connected");
   } catch (err) {
+    console.log("[Inside Error db]");
     console.log(err.messsage);
     process.exit(1);
   }

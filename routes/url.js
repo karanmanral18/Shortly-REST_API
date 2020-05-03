@@ -10,6 +10,8 @@ const Url = require("../models/Url");
 // @route     POST /api/url/shorten
 // @desc      Create short URL
 router.post("/shorten", async (req, res) => {
+  console.log("[Inside post start]");
+
   const { longUrl } = req.body;
   // const baseUrl = config.get("baseURL");
   const baseUrl = base;
@@ -45,9 +47,11 @@ router.post("/shorten", async (req, res) => {
       }
     } catch (err) {
       console.error(err);
+      console.log("[Inside post server error]");
       res.status(500).json("Server error");
     }
   } else {
+    console.log("[Inside post invalid long url]");
     res.status(401).json("Invalid long url");
   }
 });
