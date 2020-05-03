@@ -4,7 +4,7 @@ const validUrl = require("valid-url");
 const shortid = require("shortid");
 // const config = require("../config/db");
 // const base = "http://localhost:5000";
-const base = "https://shortly86505.herokuapp.com/";
+const base = "https://shortly86505.herokuapp.com";
 const Url = require("../models/Url");
 
 // @route     POST /api/url/shorten
